@@ -21,15 +21,20 @@ const boy = {
   bio: 'First Year Environmental Science Student Studying at Adelaide University'
 }
 
+const ROTATION = 60
+
 export default function App() {
 
   const {width: screenWidth} = useWindowDimensions();
 
+  const hiddenPoint = 1.5*screenWidth
+
   const translateX = useSharedValue(1)
   const rotateX = useDerivedValue(() => interpolate(
+
     translateX.value,
-    [0, 2*screenWidth],
-    [0,60]
+    [0, hiddenPoint],
+    [0,ROTATION]
   )+'deg')
 
   const cardStyle = useAnimatedStyle(() => ({
