@@ -1,6 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Pressable, useWindowDimensions } from 'react-native';
 import Card from './src/components/Card'
+import Animated, { useSharedValue, useAnimatedStyle, useDerivedValue, useAnimatedGestureHandler, interpolate } from 'react-native-reanimated'
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+
+import { LogBox } from 'react-native';
+   LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+]);
 
 const girl = {
   image: '../../../assets/Girl.jpg',
@@ -15,9 +22,45 @@ const boy = {
 }
 
 export default function App() {
+
+  const {width: screenWidth} = useWindowDimensions();
+
+  const translateX = useSharedValue(1)
+  const rotateX = useDerivedValue(() => interpolate(
+    translateX.value,
+    [0, 2*screenWidth],
+    [0,60]
+  )+'deg')
+
+  const cardStyle = useAnimatedStyle(() => ({
+    transform: [
+      {
+        translateX: translateX.value,
+      },
+      {
+        rotate: rotateX.value
+      }
+    ]
+  }))
+
+  const gestureHandler = useAnimatedGestureHandler({
+    onStart: (_, context) => {
+      context.startX = translateX.value;
+    },
+    onActive: (event,context) => {
+      translateX.value = event.translationX+context.startX
+    }
+  });
+
   return (
     <View style={styles.pageContainer}>
-      <Card user={boy}/>
+      <GestureHandlerRootView>
+        <PanGestureHandler onGestureEvent={gestureHandler}>
+          <Animated.View style={[styles.animatedCard, cardStyle]}>
+            <Card user={girl} />
+          </Animated.View>
+        </PanGestureHandler>
+      </GestureHandlerRootView>
       <StatusBar style="auto" />
     </View>
   );
@@ -30,4 +73,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  animatedCard: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
