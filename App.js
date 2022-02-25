@@ -3,11 +3,15 @@ import { StyleSheet, Text, View, ImageBackground, Pressable, useWindowDimensions
 import Card from './src/components/Card'
 import Animated, { useSharedValue, useAnimatedStyle, useDerivedValue, useAnimatedGestureHandler, interpolate } from 'react-native-reanimated'
 import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { LogBox } from 'react-native';
    LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
+
+const Stack = createNativeStackNavigator();
 
 const girl = {
   image: '../../../assets/Girl.jpg',
