@@ -14,7 +14,7 @@ const CardStack = (props) => {
     const groupMembers = Users.Groups[group].members
 
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [nextIndex, setNextIndex] = useState(currentIndex+1)
+    const [nextIndex, setNextIndex] = useState(currentIndex + 1)
 
     const [currentMemberIndex, setCurrentMemberIndex] = useState(groupMembers[currentIndex])
     const [nextMemberIndex, setNextMemberIndex] = useState(groupMembers[nextIndex])
@@ -81,17 +81,17 @@ const CardStack = (props) => {
     });
 
     useEffect(() => {
-        
+
         setCurrentMemberIndex(groupMembers[currentIndex % groupMembers.length])
     }, [currentIndex])
-    
+
     useEffect(() => {
         setNextIndex(currentIndex + 1)
     }, [currentMemberIndex])
-    
+
     useEffect(() => {
         setNextMemberIndex(groupMembers[nextIndex % groupMembers.length])
-        
+
     }, [nextIndex])
 
     useEffect(() => {
@@ -100,23 +100,25 @@ const CardStack = (props) => {
 
 
     return (
-        <View style={{width:'100%'}}>
+        <View style={{ width: '100%', height:'100%' }}>
             <View style={styles.nextCard}>
                 <Animated.View style={[styles.animatedCard, nextCardStyle]}>
-                    <Text>Next</Text>
+                    <Text>Next{/* DEBUGGING */}</Text>
                     <Card user={nextProfile}></Card>
                 </Animated.View>
             </View>
-            <GestureHandlerRootView style={{ width: '100%' }}>
+            <GestureHandlerRootView style={{ width: '100%', height:'100%' }}>
                 <PanGestureHandler onGestureEvent={gestureHandler}>
                     <Animated.View style={[styles.animatedCard, cardStyle]}>
-                    <Text>Current</Text>
+                        <Text>Current{/* DEBUGGING */}</Text>
                         <Card user={currentProfile} />
+
                     </Animated.View>
                 </PanGestureHandler>
             </GestureHandlerRootView>
-        </View>
             
+        </View>
+
 
     )
 }
@@ -125,18 +127,18 @@ export default CardStack
 
 const styles = StyleSheet.create({
     animatedCard: {
-      width: '100%',
-      height: '100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      //flex:1,
+        width: '100%',
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex:1,
     },
     nextCard: {
-      width:'100%',
-      height:'100%',
-      zIndex:-100,
-      justifyContent:'center',
-      alignItems:'center',
-      position: 'absolute',
+        width: '100%',
+        height: '100%',
+        zIndex: -100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
     }
-  });
+});

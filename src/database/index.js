@@ -15,7 +15,7 @@ const Users = [
             subjects: ["MATHS 1002", "PRGM 1001", "PSYCH 1001", "ENGL 2013"],
             age: 19,
             degree:"Computer Science",
-            profilePc: "",
+            profilePc: "https://i.ibb.co/QnpNLQT/2.png",
             swipedOn: {
                 4:false,
                 1:true
@@ -178,7 +178,7 @@ const Users = [
 
         {
             id: 13,
-            fullName: "Annie Edison TESTESETSETESTSETSETSETSETSETSETSETSETSTE ETSET atsdfadf",
+            fullName: "Annie Edison",
             subjects: ["ARTS 3029", "PSYCH 1001", "LIT 1402", "ENGL 2013"],
             age: 19,
             degree:"Art",
@@ -336,7 +336,7 @@ const Users = [
             subjects: ["ARTS 3029", "PHYS 2901", "PSYCH 1001", "ENGL 2013"],
             age: 19,
             degree:"Computer Science",
-            profilePc: "",
+            profilePc: "https://i.ibb.co/QnpNLQT/2.png",
             swipedOn: {
                 2:false,
                 4:true

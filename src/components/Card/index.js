@@ -22,7 +22,7 @@ export default Card
 
 const styles = StyleSheet.create({
     card: {
-      width: '95%',
+      width: '90%',
       height: '70%',
       borderRadius: 10,
   
