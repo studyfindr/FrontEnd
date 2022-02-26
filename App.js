@@ -97,7 +97,7 @@ export default function App() {
           {matched && (
 
             <View style={[styles.card]}>
-           
+            
 
             <Text style={styles.name}>IT'S A MATCH</Text>
             <Text>{Users.Groups[previousGroupIndex].groupName} wants you to join them too!</Text>
