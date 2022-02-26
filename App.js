@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 },
 inputContainer: {
-    width: '80%'
+    width: '100%'
 },
 input: {
     backgroundColor: 'white',
@@ -183,7 +183,7 @@ input: {
     marginTop: 5,
 },
 buttonContainer: {
-    width : '60%',
+    width : '100%',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 40,
