@@ -337,7 +337,7 @@ const Users = [
 
 const Groups = [
         {
-            id: 1,
+            id: 0,
             groupName: "Community",
             members: [ 4, 6, 13, 21, 23 ],
             swipedOn: {
@@ -349,7 +349,7 @@ const Groups = [
             }
         },
         {
-            id: 2,
+            id: 1,
             groupName: "The Office",
             members: [ 2, 8, 11, 15, 18 ],
             swipedOn: {
@@ -361,7 +361,7 @@ const Groups = [
             }
         },
         {
-            id: 3,
+            id: 2,
             groupName: "Big Bang Theory",
             members: [ 7, 10, 17, 25 ],
             swipedOn: {
@@ -373,7 +373,7 @@ const Groups = [
             }
         },
         {
-            id: 4,
+            id: 3,
             groupName: "Pitch Perfect",
             members: [ 3, 9, 12, 16, 20 ],
             swipedOn: {
@@ -385,7 +385,7 @@ const Groups = [
             }
         },
         {
-            id: 5,
+            id: 4,
             groupName: "Sudo Apt Get Coffee",
             members: [ 1, 5, 14, 19, 22, 24 ],
             swipedOn: {
