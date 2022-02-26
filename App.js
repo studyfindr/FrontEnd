@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, Pressable, Button } from 'react-native';
 import { useEffect, useState } from 'react'
 import CardStack from './src/components/CardStack'
 import Users from './src/database'
-import MatchCard from './src/components/MatchCard';
 
 
 
