@@ -1,6 +1,5 @@
 
-const Users = () => {
-    return [
+const Users = [
   
         {
             id: 1,
@@ -327,10 +326,8 @@ const Users = () => {
         }
 
     ]
-}
 
-const Groups = () => {
-    return [
+const Groups = [
         {
             id: 1,
             groupName: "Community",
@@ -397,7 +394,5 @@ const Groups = () => {
         },
 
     ]
-}
-
 
 export default {Users, Groups};

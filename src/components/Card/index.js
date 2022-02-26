@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 const Card = (props) => {
-    const {image, name, bio} = props.user
+    const {fullName, age, degree} = props.user
     return (
         <View style={styles.card}>
         <ImageBackground
@@ -10,8 +10,8 @@ const Card = (props) => {
           style={styles.image}
         >
           <View style={styles.infoContainer}>
-            <Text style={styles.name}>{name}</Text>
-            <Text style={styles.description}>{bio}</Text>
+            <Text style={styles.name}>{fullName}</Text>
+            <Text style={styles.description}>{`A ${age} year old student studying ${degree}`}</Text>
           </View>
         </ImageBackground>
       </View>
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'flex-end',
       paddingLeft: 10,
-      paddingBottom: 10
+      paddingBottom: 10,
+      //opacity:'inherit',
     },
     name: {
       color:'white',
