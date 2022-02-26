@@ -26,6 +26,11 @@ const CardStack = (props) => {
 
     const hiddenPoint = 2 * screenWidth
 
+    useEffect(() => {
+        console.log('hi')
+        setCurrentIndex(0)
+    }, [group])
+
     const translateX = useSharedValue(1)
     const rotateX = useDerivedValue(() => interpolate(
 
@@ -81,7 +86,7 @@ const CardStack = (props) => {
     });
 
     useEffect(() => {
-
+        console.log('hi1')
         setCurrentMemberIndex(groupMembers[currentIndex % groupMembers.length])
     }, [currentIndex])
 

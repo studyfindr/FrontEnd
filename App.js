@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-
+import { StyleSheet, Text, View, Image, Pressable, Button } from 'react-native';
+import { useEffect, useState } from 'react'
 import CardStack from './src/components/CardStack'
 import Users from './src/database'
 
 import tick from './assets/tick.png'
 import cross from './assets/cross.png'
-//import { NavigationContainer } from '@react-navigation/native';
-//import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 
 
@@ -22,14 +21,39 @@ LogBox.ignoreLogs([
 
 export default function App() {
 
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0)
+
+  const tickPressed = () => {
+
+    setCurrentGroupIndex(currentGroupIndex + 1)
+  }
 
   return (
+    //gonna have to change the width height and position of these ticks and crosses
+
     <View style={styles.pageContainer}>
-      <CardStack group={1} />
-      <View>
-        <Image style={{ width: 50, height: 50, position:'absolute', left:-50, top:-150 }} source={require('./assets/tick.png')} />
-        <Image style={{ width: 50, height: 50, position:'absolute', left:50, top:-150 }} source={require('./assets/cross.png')} />
-      </View>
+      {!loggedIn && (
+        <View>
+          <Text>NOT LOGGED IN</Text>
+          <Button onPress={() => setLoggedIn(true)} title={'Log In!'}></Button>
+        </View>
+      )}
+      {loggedIn && (
+        <View style={{width:'100%', height:'100%'}}>
+          <CardStack group={currentGroupIndex} />
+          <View>
+            <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: -125, top: -100 }}>
+              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/cross.png')} />
+            </Pressable>
+            <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: 50, top: -100 }}>
+              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/tick.png')} />
+            </Pressable>
+          </View>
+        </View>
+      )}
+
 
       <StatusBar style="auto" />
     </View>
