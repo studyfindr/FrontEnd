@@ -12,23 +12,26 @@ import Users from '../../database'
 const CardStack = (props) => {
     const group = props.group
     const groupMembers = Users.Groups[group].members
-
     const [currentIndex, setCurrentIndex] = useState(0)
     const [nextIndex, setNextIndex] = useState(currentIndex + 1)
+
+    const [update, setUpdate] = useState(false)
 
     const [currentMemberIndex, setCurrentMemberIndex] = useState(groupMembers[currentIndex])
     const [nextMemberIndex, setNextMemberIndex] = useState(groupMembers[nextIndex])
 
     const currentProfile = Users.Users[currentMemberIndex];
     const nextProfile = Users.Users[nextMemberIndex];
+    
+    const groupName = Users.Groups[group].groupName
 
     const { width: screenWidth } = useWindowDimensions();
 
     const hiddenPoint = 2 * screenWidth
 
     useEffect(() => {
-        console.log('hi')
-        setCurrentIndex(0)
+        setCurrentIndex(currentIndex+1)
+        
     }, [group])
 
     const translateX = useSharedValue(1)
@@ -86,13 +89,9 @@ const CardStack = (props) => {
     });
 
     useEffect(() => {
-        console.log('hi1')
         setCurrentMemberIndex(groupMembers[currentIndex % groupMembers.length])
-    }, [currentIndex])
-
-    useEffect(() => {
         setNextIndex(currentIndex + 1)
-    }, [currentMemberIndex])
+    }, [currentIndex, update])
 
     useEffect(() => {
         setNextMemberIndex(groupMembers[nextIndex % groupMembers.length])
@@ -115,7 +114,7 @@ const CardStack = (props) => {
             <GestureHandlerRootView style={{ width: '100%', height:'100%' }}>
                 <PanGestureHandler onGestureEvent={gestureHandler}>
                     <Animated.View style={[styles.animatedCard, cardStyle]}>
-                        <Text>Current{/* DEBUGGING */}</Text>
+                        <Text>{groupName}{/* DEBUGGING */}</Text>
                         <Card user={currentProfile} />
 
                     </Animated.View>

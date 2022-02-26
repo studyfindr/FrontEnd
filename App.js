@@ -27,7 +27,7 @@ export default function App() {
 
   const tickPressed = () => {
 
-    setCurrentGroupIndex(currentGroupIndex + 1)
+    setCurrentGroupIndex((currentGroupIndex + 1)%Users.Groups.length)
   }
 
   return (
@@ -44,11 +44,11 @@ export default function App() {
         <View style={{width:'100%', height:'100%'}}>
           <CardStack group={currentGroupIndex} />
           <View>
-            <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: -125, top: -100 }}>
-              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/cross.png')} />
-            </Pressable>
-            <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: 50, top: -100 }}>
+          <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: 75, top: -100, zIndex:-100 }}>
               <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/tick.png')} />
+            </Pressable>
+            <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: 250, top: -100 }}>
+              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/cross.png')} />
             </Pressable>
           </View>
         </View>
