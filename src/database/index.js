@@ -1,6 +1,14 @@
 
 const Users = [
-  
+        {
+            id: 0,
+            fullName: "placeHolder",
+            subjects: ["placeHolder", "placeHolder", "placeHolder", "placeHolder"],
+            age: 0,
+            degree:"placeHolder",
+            swipedOn: {}
+
+        },
         {
             id: 1,
             fullName: "Will Davis",
@@ -170,7 +178,7 @@ const Users = [
 
         {
             id: 13,
-            fullName: "Annie Edison",
+            fullName: "Annie Edison TESTESETSETESTSETSETSETSETSETSETSETSETSTE ETSET atsdfadf",
             subjects: ["ARTS 3029", "PSYCH 1001", "LIT 1402", "ENGL 2013"],
             age: 19,
             degree:"Art",
@@ -354,7 +362,7 @@ const Users = [
 
 const Groups = [
         {
-            id: 1,
+            id: 0,
             groupName: "Community",
             members: [ 4, 6, 13, 21, 23 ],
             profilePc: "https://i.ibb.co/Qb47Tny/782f3606-1ca0-4f9e-9024-57a27b636ae5.jpg",
@@ -366,9 +374,8 @@ const Groups = [
                 15:true,
             }
         },
-
         {
-            id: 2,
+            id: 1,
             groupName: "The Office",
             members: [ 2, 8, 11, 15, 18 ],
             profilePc:"https://i.ibb.co/RzP8dGh/pitch-perfect-review-image-1200x688.jpg"
@@ -380,9 +387,8 @@ const Groups = [
                 11:true,
             }
         },
-
         {
-            id: 3,
+            id: 2,
             groupName: "Big Bang Theory",
             members: [ 7, 10, 17, 25 ],
             profilePic:"https://i.ibb.co/Ldt4RCv/The-Big-Bang-Theory-cast.jpg",
@@ -394,9 +400,8 @@ const Groups = [
                 13:true,
             }
         },
-
         {
-            id: 4,
+            id: 3,
             groupName: "Pitch Perfect",
             members: [ 3, 9, 12, 16, 20 ],
             profilePic: "https://i.ibb.co/Dg2VG2L/the-office-nbc.png",
@@ -408,9 +413,8 @@ const Groups = [
                 16:true,
             }
         },
-
         {
-            id: 5,
+            id: 4,
             groupName: "Sudo Apt Get Coffee",
             members: [ 1, 5, 14, 19, 22, 24 ],
             profilePic: "",
@@ -422,7 +426,6 @@ const Groups = [
                 22:true,
             }
         },
-
     ]
 
 export default {Users, Groups};
