@@ -1,6 +1,14 @@
 
 const Users = [
-  
+        {
+            id: 0,
+            fullName: "placeHolder",
+            subjects: ["placeHolder", "placeHolder", "placeHolder", "placeHolder"],
+            age: 0,
+            degree:"placeHolder",
+            swipedOn: {}
+
+        },
         {
             id: 1,
             fullName: "Will Davis",
@@ -158,7 +166,7 @@ const Users = [
 
         {
             id: 13,
-            fullName: "Annie Edison",
+            fullName: "Annie Edison TESTESETSETESTSETSETSETSETSETSETSETSETSTE ETSET atsdfadf",
             subjects: ["ARTS 3029", "PSYCH 1001", "LIT 1402", "ENGL 2013"],
             age: 19,
             degree:"Art",
@@ -340,7 +348,6 @@ const Groups = [
                 15:true,
             }
         },
-
         {
             id: 2,
             groupName: "The Office",
@@ -353,7 +360,6 @@ const Groups = [
                 11:true,
             }
         },
-
         {
             id: 3,
             groupName: "Big Bang Theory",
@@ -366,7 +372,6 @@ const Groups = [
                 13:true,
             }
         },
-
         {
             id: 4,
             groupName: "Pitch Perfect",
@@ -379,7 +384,6 @@ const Groups = [
                 16:true,
             }
         },
-
         {
             id: 5,
             groupName: "Sudo Apt Get Coffee",
@@ -392,7 +396,6 @@ const Groups = [
                 22:true,
             }
         },
-
     ]
 
 export default {Users, Groups};

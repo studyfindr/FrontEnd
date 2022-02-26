@@ -22,7 +22,8 @@ export default function App() {
   
   return (
     <View style={styles.pageContainer}>
-      <CardStack group={0}/>
+      <CardStack group={1}/>
+      
       <StatusBar style="auto" />
     </View>
   );

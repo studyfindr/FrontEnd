@@ -11,12 +11,16 @@ import Users from '../../database'
 
 const CardStack = (props) => {
     const group = props.group
+    const groupMembers = Users.Groups[group].members
 
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [nextIndex, setNextIndex] = useState(currentIndex + 1)
+    const [nextIndex, setNextIndex] = useState(currentIndex+1)
 
-    const currentProfile = Users.Users[currentIndex];
-    const nextProfile = Users.Users[nextIndex];
+    const [currentMemberIndex, setCurrentMemberIndex] = useState(groupMembers[currentIndex])
+    const [nextMemberIndex, setNextMemberIndex] = useState(groupMembers[nextIndex])
+
+    const currentProfile = Users.Users[currentMemberIndex];
+    const nextProfile = Users.Users[nextMemberIndex];
 
     const { width: screenWidth } = useWindowDimensions();
 
@@ -53,41 +57,60 @@ const CardStack = (props) => {
     const gestureHandler = useAnimatedGestureHandler({
         onStart: (_, context) => {
             context.startX = translateX.value;
-            console.log(group)
         },
         onActive: (event, context) => {
             translateX.value = event.translationX + context.startX
         },
         onEnd: (event) => {
+
             if (Math.abs(event.velocityX) < SWIPEVELOCITY) {
                 translateX.value = withSpring(0);
                 //return;
             } else {
                 if (event.velocityX > 0) {
-                    translateX.value = withSpring(hiddenPoint, {}, () => runOnJS(setCurrentIndex)(currentIndex + 1))
+                    translateX.value = withSpring(hiddenPoint, {}, () => {
+                        runOnJS(setCurrentIndex)(currentIndex + 1)
+                    })
                 } else {
-                    translateX.value = withSpring(-hiddenPoint, {}, () => runOnJS(setCurrentIndex)(currentIndex + 1))
+                    translateX.value = withSpring(-hiddenPoint, {}, () => {
+                        runOnJS(setCurrentIndex)(currentIndex + 1)
+                    })
                 }
             }
         }
     });
 
     useEffect(() => {
-        translateX.value = 0
-        setNextIndex(currentIndex + 1)
+        
+        setCurrentMemberIndex(groupMembers[currentIndex % groupMembers.length])
     }, [currentIndex])
+    
+    useEffect(() => {
+        setNextIndex(currentIndex + 1)
+    }, [currentMemberIndex])
+    
+    useEffect(() => {
+        setNextMemberIndex(groupMembers[nextIndex % groupMembers.length])
+        
+    }, [nextIndex])
+
+    useEffect(() => {
+        translateX.value = 0
+    }, [nextMemberIndex])
 
 
     return (
         <View style={{width:'100%'}}>
             <View style={styles.nextCard}>
                 <Animated.View style={[styles.animatedCard, nextCardStyle]}>
+                    <Text>Next</Text>
                     <Card user={nextProfile}></Card>
                 </Animated.View>
             </View>
             <GestureHandlerRootView style={{ width: '100%' }}>
                 <PanGestureHandler onGestureEvent={gestureHandler}>
                     <Animated.View style={[styles.animatedCard, cardStyle]}>
+                    <Text>Current</Text>
                         <Card user={currentProfile} />
                     </Animated.View>
                 </PanGestureHandler>
