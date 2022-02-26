@@ -18,17 +18,28 @@ LogBox.ignoreLogs([
 //const Stack = createNativeStackNavigator();
 
 
+const USERID = 0;
+
 
 export default function App() {
 
   const [loggedIn, setLoggedIn] = useState(false)
 
+  const [previousGroupIndex, setPreviousGroupIndex] = useState(0)
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0)
 
+  
   const tickPressed = () => {
-
+    setPreviousGroupIndex(currentGroupIndex%Users.Groups.length)
     setCurrentGroupIndex((currentGroupIndex + 1)%Users.Groups.length)
+    
   }
+
+  useEffect(() => {
+    if (Users.Groups[previousGroupIndex].swipedOn[USERID]){
+      console.log("It's a Match")
+    }
+  }, [currentGroupIndex])
 
   return (
     //gonna have to change the width height and position of these ticks and crosses

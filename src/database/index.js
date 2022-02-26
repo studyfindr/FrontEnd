@@ -420,7 +420,7 @@ const Groups = [
             profilePic: "",
             swipedOn: {
                 14:true,
-                17:true,
+                0:true,
                 18:true,
                 21:true,
                 22:true,
