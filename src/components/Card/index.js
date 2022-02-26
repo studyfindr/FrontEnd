@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 const Card = (props) => {
-    const {fullName, age, degree,profilePc} = props.user
+    const {fullName, age, degree,profilePc, school, subjects} = props.user
     return (
         <View style={styles.card}>
         <ImageBackground
@@ -11,7 +11,8 @@ const Card = (props) => {
         >
           <View style={styles.infoContainer}>
             <Text style={styles.name}>{fullName}</Text>
-            <Text style={styles.description}>{`A ${age} year old student studying ${degree}`}</Text>
+            <Text style={styles.description}>{`A ${age} year old student studying ${degree} at ${school}`}</Text>
+            <Text style={styles.description}>{`Subjects: ${subjects.join(', ')}`}</Text>
           </View>
         </ImageBackground>
       </View>
