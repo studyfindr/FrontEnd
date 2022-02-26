@@ -164,11 +164,11 @@ const Users = [
 
         {
             id: 12,
-            fullName: "Benjamin Platt",
+            fullName: "Ben Platt",
             subjects: ["LIT 1402", "PHYS 2901", "PSYCH 1001", "MATHS 1002"],
             age: 18,
             degree:"Psychology",
-            profilePc: "https://i.ibb.co/r6Jvbdg/10.jpg",
+            profilePc: "https://i.ibb.co/P9VcP8Q/12.jpg",
             swipedOn: {
                 5:false,
                 3:true
