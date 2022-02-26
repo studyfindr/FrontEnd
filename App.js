@@ -10,6 +10,7 @@ import Users from './src/database'
 
 import { LogBox } from 'react-native';
 import LoginScreen from './src/screens/LoginScreen';
+import { ImageBackground } from 'react-native-web';
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
@@ -30,11 +31,12 @@ export default function App() {
 
   const [previousGroupIndex, setPreviousGroupIndex] = useState(0)
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0)
-
+  const [tickUpdate, setTickUpdate] = useState(true)
   
   const tickPressed = () => {
     setPreviousGroupIndex(currentGroupIndex%Users.Groups.length)
     setCurrentGroupIndex((currentGroupIndex + 1)%Users.Groups.length)
+    setTickUpdate(!tickUpdate)
   }
 
   const crossPressed = () => {
@@ -47,7 +49,7 @@ export default function App() {
     if (Users.Groups[previousGroupIndex].swipedOn[USERID]){
       setMatched(true)
     }
-  }, [currentGroupIndex])
+  }, [tickUpdate])
 
   return (
     //gonna have to change the width height and position of these ticks and crosses
@@ -107,11 +109,11 @@ export default function App() {
           )}
           
           <View>
-          <Pressable onPress={tickPressed} style={{ width: 50, height: 50, position: 'absolute', left: 75, top: -100, zIndex:-100 }}>
-              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/tick.png')} />
+          <Pressable onPress={tickPressed} style={{ width: 75, height: 75, position: 'absolute', left: 75, top: -100, zIndex:-100 }}>
+              <Image style={{width: '100%', height: '100%', resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/tick.png')} />
             </Pressable>
-            <Pressable onPress={crossPressed} style={{ width: 50, height: 50, position: 'absolute', left: 250, top: -100 }}>
-              <Image style={{ resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/cross.png')} />
+            <Pressable onPress={crossPressed} style={{ width:75, height: 75, position: 'absolute', left: 250, top: -100 }}>
+              <Image style={{ width: '100%', height: '100%', resizeMode: 'contain', borderRadius: 5 }} source={require('./assets/cross.png')} />
             </Pressable>
           </View>
           
