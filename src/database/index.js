@@ -15,7 +15,7 @@ const Users = [
             subjects: ["MATHS 1002", "PRGM 1001", "PSYCH 1001", "ENGL 2013"],
             age: 19,
             degree:"Computer Science",
-            profilePc: "https://i.ibb.co/QnpNLQT/2.png",
+            profilePc: "https://i.ibb.co/JqBT05q/Screenshot-20220226-2230102.png",
             swipedOn: {
                 4:false,
                 1:true
@@ -70,7 +70,7 @@ const Users = [
             subjects: ["LIT 1402", "PSYCH 1001", "ENTREP 3901", "ENGL 2013"],
             age: 21,
             degree:"Computer Science",
-            profilePc: 'https://i.ibb.co/X3PsGqW/6.jpg',
+            profilePc: 'https://i.ibb.co/3yRQfTk/IMG-1689.png',
             swipedOn: {
                 4:false,
                 1:true
@@ -336,7 +336,7 @@ const Users = [
             subjects: ["ARTS 3029", "PHYS 2901", "PSYCH 1001", "ENGL 2013"],
             age: 19,
             degree:"Computer Science",
-            profilePc: "https://i.ibb.co/QnpNLQT/2.png",
+            profilePc: "https://i.ibb.co/NN0Qttv/Snapchat-368968457.jpg",
             swipedOn: {
                 2:false,
                 4:true
