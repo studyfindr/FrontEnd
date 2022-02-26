@@ -10,7 +10,6 @@ import Users from './src/database'
 
 import { LogBox } from 'react-native';
 import LoginScreen from './src/screens/LoginScreen';
-import { ImageBackground } from 'react-native-web';
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
