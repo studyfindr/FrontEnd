@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import {KeyboardAvoidingView,StyleSheet,Text,TouchableOpacity,View} from 'react-native'
+import {KeyboardAvoidingView,StyleSheet,Text,TouchableOpacity,View,TextInput} from 'react-native'
 
 
 const LoginScreen = () => {

@@ -8,6 +8,7 @@ import Users from './src/database'
 
 
 import { LogBox } from 'react-native';
+import LoginScreen from './src/screens/LoginScreen';
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
@@ -50,8 +51,7 @@ export default function App() {
     <View style={styles.pageContainer}>
       {!loggedIn && (
         <View>
-          <Text>NOT LOGGED IN</Text>
-          <Button onPress={() => setLoggedIn(true)} title={'Log In!'}></Button>
+          <LoginScreen></LoginScreen>
         </View>
       )}
       {loggedIn && (
