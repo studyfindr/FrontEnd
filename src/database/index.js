@@ -164,6 +164,7 @@ const Users = [
             subjects: ["MATHS 1002", "ARTS 3029", "DEN 2410", "ENTREP 3901"],
             age: 22,
             degree:"Art",
+            school:'Cornell',
             profilePc: "https://i.ibb.co/DWVhCkP/THE-OFFICE-Pictured-Jenna-Fischer-as-Pam-Beesly-NBC-Photo-Mitchell-Haaseth.jpg",
             swipedOn: {
                 5:false,
