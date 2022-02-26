@@ -59,7 +59,6 @@ export default function App() {
         <View>
           <KeyboardAvoidingView
             style = {styles.container}
-            behavior = "padding"
         >
             <View style = {styles.inputContainer}>
                 <TextInput
