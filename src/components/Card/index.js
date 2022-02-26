@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 const Card = (props) => {
-    const {fullName, age, degree} = props.user
+    const {fullName, age, degree,profilePc} = props.user
     return (
         <View style={styles.card}>
         <ImageBackground
             /* At the moment image is not dynamic, this should change once backend setup */
-          source={require('../../../assets/Girl.jpg')}
+          source={{uri:profilePc}}
           style={styles.image}
         >
           <View style={styles.infoContainer}>

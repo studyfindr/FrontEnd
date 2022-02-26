@@ -70,7 +70,7 @@ const Users = [
             subjects: ["LIT 1402", "PSYCH 1001", "ENTREP 3901", "ENGL 2013"],
             age: 21,
             degree:"Computer Science",
-            profilePc: ,
+            profilePc: 'https://i.ibb.co/X3PsGqW/6.jpg',
             swipedOn: {
                 4:false,
                 1:true
@@ -378,7 +378,7 @@ const Groups = [
             id: 1,
             groupName: "The Office",
             members: [ 2, 8, 11, 15, 18 ],
-            profilePc:"https://i.ibb.co/RzP8dGh/pitch-perfect-review-image-1200x688.jpg"
+            profilePc:"https://i.ibb.co/RzP8dGh/pitch-perfect-review-image-1200x688.jpg",
             swipedOn: {
                 2:true,
                 6:true,
