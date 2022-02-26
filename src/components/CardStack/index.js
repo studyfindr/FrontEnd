@@ -104,19 +104,19 @@ const CardStack = (props) => {
 
 
     return (
-        <View style={{ width: '100%', height:'100%' }}>
+        <View style={{ width: '100%', height:'100%', justifyContent:'flex-start', }}>
+            <Text style={{position:'absolute', top:100, left:25, fontSize:28, fontWeight:'bold'}}>{groupName}</Text>
             <View style={styles.nextCard}>
                 <Animated.View style={[styles.animatedCard, nextCardStyle]}>
-                    <Text>Next{/* DEBUGGING */}</Text>
+                    <Text>{/* DEBUGGING */}</Text>
                     <Card user={nextProfile}></Card>
                 </Animated.View>
             </View>
             <GestureHandlerRootView style={{ width: '100%', height:'100%' }}>
                 <PanGestureHandler onGestureEvent={gestureHandler}>
                     <Animated.View style={[styles.animatedCard, cardStyle]}>
-                        <Text>{groupName}{/* DEBUGGING */}</Text>
+                        <Text>{/* DEBUGGING */}</Text>
                         <Card user={currentProfile} />
-
                     </Animated.View>
                 </PanGestureHandler>
             </GestureHandlerRootView>
