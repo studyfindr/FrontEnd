@@ -16,6 +16,7 @@ const Users = [
             age: 19,
             degree:"Computer Science",
             profilePc: "https://i.ibb.co/JqBT05q/Screenshot-20220226-2230102.png",
+            school:"Adelaide University",
             swipedOn: {
                 4:false,
                 1:true
@@ -29,6 +30,7 @@ const Users = [
             subjects: ["COMP 1102","PHYS 2901", "PSYCH 1001", "LIT 1402"],
             age: 19,
             degree:"Maths",
+            school:'Cornell',
             profilePc: "https://i.ibb.co/QnpNLQT/2.png",
             swipedOn: {
                 2:false,
@@ -43,6 +45,7 @@ const Users = [
             subjects: ["MATHS 1002", "LIT 1402", "ARTS 3029", "PSYCH 1001"],
             age: 25,
             degree:"Art",
+            school:"Barden University",
             profilePc: "https://i.ibb.co/jDRYdbm/3.png",
             swipedOn: {
                 5:false,
@@ -56,6 +59,7 @@ const Users = [
             subjects: ["LIT 1402", "MATHS 1002", "PSYCH 1001", "ENTREP 3901"],
             age: 19,
             degree:"Maths",
+            school:'Greendale',
             profilePc: "https://i.ibb.co/9r6gg1T/4.jpg",
             swipedOn: {
                 2:false,
@@ -71,6 +75,7 @@ const Users = [
             age: 21,
             degree:"Computer Science",
             profilePc: 'https://i.ibb.co/3yRQfTk/IMG-1689.png',
+            school:"Adelaide University",
             swipedOn: {
                 4:false,
                 1:true
@@ -84,6 +89,7 @@ const Users = [
             subjects: ["ARTS 3029", "PRGM 1001", "PSYCH 1001", "MATHS 1002"],
             age: 20,
             degree:"English",
+            school:'Greendale',
             profilePc: "https://i.ibb.co/X3PsGqW/6.jpg",
             swipedOn: {
                 5:false,
@@ -98,6 +104,7 @@ const Users = [
             subjects: ["MATHS 1002", "PSYCH 1001", "LIT 1402", "DEN 2410"],
             age: 19,
             degree:"Physics",
+            school:"Caltech",
             profilePc: "https://i.ibb.co/xCmKV7x/The-Inspiration-Deprivation-Pictured-Sheldon-Cooper-Jim-Parsons-The-concept-of-what-it-would-mean-fo.jpg",
             swipedOn: {
                 4:false,
@@ -112,6 +119,7 @@ const Users = [
             subjects: ["ARTS 3029", "PHYS 2901", "DEN 2410", "MATHS 1002"],
             age: 22,
             degree:"Business",
+            school:'Cornell',
             profilePc: "https://i.ibb.co/rf3GYhc/8.png",
             swipedOn: {
                 3:false,
@@ -126,6 +134,7 @@ const Users = [
             subjects: ["ARTS 3029", "PSYCH 1001", "LIT 1402", "ENGL 2013"],
             age: 24,
             degree:"Art",
+            school:"Barden University",
             profilePc: "https://i.ibb.co/p6q3X4q/9.jpg",
             swipedOn: {
                 2:false,
@@ -140,6 +149,7 @@ const Users = [
             subjects: ["COMP 1102", "PRGM 1001", "PSYCH 1001", "DEN 2410"],
             age: 23,
             degree:"Computer Science",
+            school:'Caltech',
             profilePc: "https://i.ibb.co/r6Jvbdg/10.jpg",
             swipedOn: {
                 3:false,
@@ -168,6 +178,7 @@ const Users = [
             subjects: ["LIT 1402", "PHYS 2901", "PSYCH 1001", "MATHS 1002"],
             age: 18,
             degree:"Psychology",
+            school:"Barden University",
             profilePc: "https://i.ibb.co/P9VcP8Q/12.jpg",
             swipedOn: {
                 5:false,
@@ -182,6 +193,7 @@ const Users = [
             subjects: ["ARTS 3029", "PSYCH 1001", "LIT 1402", "ENGL 2013"],
             age: 19,
             degree:"Art",
+            school:'Greendale',
             profilePc: "https://i.ibb.co/7bSGjbv/COMMUNITY-Bondage-and-Beta-Male-Sexuality-Episode-507-Pictured-Alison-Brie-as-Annie-Photo-by-Jordin.jpg",
             swipedOn: {
                 2:false,
@@ -196,6 +208,7 @@ const Users = [
             subjects: ["COMP 1102","DEN 2410","ENTREP 3901","LIT 1402"],
             age: 19,
             degree:"Philosophy",
+            school:"Adelaide University",
             profilePc: "https://i.ibb.co/6RGJ0fK/1644402664280.jpg",
             swipedOn: {
                 1:false,
@@ -210,6 +223,7 @@ const Users = [
             subjects: ["MATHS 1002", "LIT 1402", "PSYCH 1001", "ARTS 3029"],
             age: 19,
             degree:"Business",
+            school:'Cornell',
             profilePc: "https://i.ibb.co/47QvLp1/15.jpg",
             swipedOn: {
                 3:false,
@@ -224,6 +238,7 @@ const Users = [
             subjects: ["PHYS 2901", "PRGM 1001", "DEN 2410", "LIT 1402"],
             age: 31,
             degree:"English",
+            school:"Barden University",
             profilePc: "https://i.ibb.co/fnKF2W2/16.jpg",
             swipedOn: {
                 1:false,
@@ -238,6 +253,7 @@ const Users = [
             subjects: ["MATHS 1002", "ENTREP 3901", "LIT 1402", "ENGL 2013"],
             age: 31,
             degree:"English",
+            school:"Caltech",
             profilePc: "https://i.ibb.co/7bwx85Z/17.png",
             swipedOn: {
                 1:false,
@@ -252,6 +268,7 @@ const Users = [
             subjects: ["COMP 1102", "PHYS 2901", "DEN 2410", "ENTREP 3901"],
             age: 19,
             degree:"Spanish",
+            school:'Cornell',
             profilePc: "https://i.ibb.co/StGmwdL/THE-OFFICE-Pictured-Angela-Kinsey-as-Angela-Martin-NBC-Photo-Mitchell-Haaseth.jpg",
             swipedOn: {
                 4:false,
@@ -266,6 +283,7 @@ const Users = [
             subjects: ["MATHS 1002", "PSYCH 1001", "ARTS 3029", "DEN 2410"],
             age: 19,
             degree:"Computer Science",
+            school:"Adelaide University",
             profilePc: "https://i.ibb.co/gJG1tmB/IMG-0756.jpg",
             swipedOn: {
                 2:false,
@@ -280,6 +298,7 @@ const Users = [
             subjects: ["ARTS 3029", "LIT 1402", "DEN 2410", "ENGL 2013"],
             age: 20,
             degree:"Art",
+            school:"Barden University",
             profilePc:"https://i.ibb.co/Nr5JDsF/20.jpg",
             swipedOn: {
                 3:false,
@@ -294,6 +313,7 @@ const Users = [
             subjects: ["COMP 1102","ENGL 2013","PSYCH 1001","PHYS 2901"],
             age: 21,
             degree:"Law",
+            school:'Greendale',
             profilePc: "https://i.ibb.co/7YSxYNV/21.jpg",
             swipedOn: {
                 1:false,
@@ -308,6 +328,7 @@ const Users = [
             subjects: ["LIT 1402", "DEN 2410", "ARTS 3029", "ENTREP 3901"],
             age: 20,
             degree:"Computer Science",
+            school:"Adelaide University",
             profilePc: "https://i.ibb.co/JcCtZyF/received-213645534304838.jpg",
             swipedOn: {
                 2:false,
@@ -322,6 +343,7 @@ const Users = [
             subjects: ["DEN 2410", "PHYS 2901", "ENTREP 3901", "ENGL 2013"],
             age: 23,
             degree:"Law",
+            school:'Greendale',
             profilePc: "https://i.ibb.co/RDHzJM3/COMMUNITY-Pilot-Pictured-Gillian-Jacobs-as-Britta-NBC-Photo-Paul-Drinkwater.jpg",
             swipedOn: {
                 2:false,
@@ -336,6 +358,7 @@ const Users = [
             subjects: ["ARTS 3029", "PHYS 2901", "PSYCH 1001", "ENGL 2013"],
             age: 19,
             degree:"Computer Science",
+            school:"Adelaide University",
             profilePc: "https://i.ibb.co/NN0Qttv/Snapchat-368968457.jpg",
             swipedOn: {
                 2:false,
@@ -350,6 +373,7 @@ const Users = [
             subjects: ["COMP 1102", "PRGM 1001", "PHYS 2901", "LIT 1402"],
             age: 20,
             degree:"Computer Science",
+            school:"Caltech",
             profilePc: "https://i.ibb.co/pzGWHHL/Rajesh-Koothrappali.jpg",
             swipedOn: {
                 4:false,
