@@ -10,6 +10,8 @@ import Users from './src/database'
 
 import { LogBox } from 'react-native';
 import LoginScreen from './src/screens/LoginScreen';
+import { RotateInDownLeft } from 'react-native-reanimated';
+import { transform } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
@@ -98,12 +100,18 @@ export default function App() {
           {matched && (
 
             <View style={[styles.card]}>
-            
+
 
             <Text style={styles.name}>IT'S A MATCH</Text>
             <Text>{Users.Groups[previousGroupIndex].groupName} wants you to join them too!</Text>
-            <Image style={styles.image, {width: 300, height: 420, position: 'absolute', left: 15, top: 100, borderRadius: 10} } source={{uri:Users.Groups[3].profilePic}}></Image>
-            <Button onPress={() => setMatched(false)} title={'Join their Group'}  ></Button>
+            <Image style={styles.image, {width: 300, height: 200, position: 'absolute', left: 15, top: 100, borderRadius: '50%'} } source={{uri:Users.Groups[3].profilePic}}></Image>
+            <Image style={styles.image, {width: 300, height: 200, position: 'absolute', left: 15, top: 315, borderRadius: '50%'} } source={{uri:"https://i.ibb.co/6RGJ0fK/1644402664280.jpg"}}></Image>
+            <Image style={styles.image,  {width: 100, height: 100, position: 'absolute', left: 115, top: -120, borderRadius: 10,opacity:.5} } source={{uri:"https://i.ibb.co/SX4N0DH/logo.png"}}></Image>
+            <Image style={styles.image, {width: 90, height: 90, position: 'absolute', left: -20, top: 575, borderRadius: 10} } source={{uri:"https://i.ibb.co/8M7yVnN/party-popper-1f389.png"}}></Image>
+            <Image style={styles.image, {width: 90, height: 90, position: 'absolute', left: 275, top: 580, borderRadius: 10} } source={{uri:"https://i.ibb.co/8M7yVnN/party-popper-1f389.png"}}></Image>
+
+            <Button  onPress={() => setMatched(false)} title={'Join their Group'} ></Button>
+
           </View>
           )}
           {!matched && (
