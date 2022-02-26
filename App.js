@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Pressable, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable, Button, ImageBackground } from 'react-native';
 import {KeyboardAvoidingView,TouchableOpacity,TextInput} from 'react-native'
 import { useEffect, useState } from 'react'
 import CardStack from './src/components/CardStack'
@@ -95,11 +95,14 @@ export default function App() {
       {loggedIn && (
         <View style={{width:'100%', height:'100%'}}>
           {matched && (
+
             <View style={[styles.card]}>
+           
+
             <Text style={styles.name}>IT'S A MATCH</Text>
             <Text>{Users.Groups[previousGroupIndex].groupName} wants you to join them too!</Text>
-            <Image style={styles.image} source={{uri:Users.Groups[3].profilePic}}></Image>
-            <Button onPress={() => setMatched(false)} title={'Join their Group'}></Button>
+            <Image style={styles.image, {width: 300, height: 420, position: 'absolute', left: 15, top: 100, borderRadius: 10} } source={{uri:Users.Groups[3].profilePic}}></Image>
+            <Button onPress={() => setMatched(false)} title={'Join their Group'}  ></Button>
           </View>
           )}
           {!matched && (
